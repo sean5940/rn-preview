@@ -232,8 +232,10 @@ export default definePreview({
 
 ## 편집기에서 보기
 
-`vscode-rn-preview` 확장을 설치하면 Cursor·VS Code 패널에서 봅니다. 선언 파일 위의 `▶ Open preview` 를
-누르면 개발 서버가 뜨고 그 선언이 선택된 채로 열립니다.
+[RN Preview](https://marketplace.visualstudio.com/items?itemName=sean5940.vscode-rn-preview) 확장
+([소스](https://github.com/sean5940/vscode-rn-preview))을 설치하면 Cursor·VS Code 패널에서 봅니다. 확장에 이 도구가
+실려 있어 따로 설치할 것이 없습니다. 선언 파일 위의 `▶ Open preview` 를 누르면 개발 서버가 뜨고 그 선언이 선택된
+채로 열립니다.
 
 ## 구성
 
