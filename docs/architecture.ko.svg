@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="850" viewBox="0 0 1360 850" font-family="'Apple SD Gothic Neo','Pretendard','Noto Sans KR','Malgun Gothic',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBoth" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1360" height="850" fill="#f8fafc"/>
+
+  <!-- 제목 -->
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#0f172a">rn-preview 아키텍처</text>
+  <text x="40" y="80" font-size="15" fill="#64748b">React Native 컴포넌트를 앱 빌드 없이 브라우저에서 그린다</text>
+
+  <!-- ───────── 그룹 A: 편집기 ───────── -->
+  <rect x="40" y="120" width="310" height="620" rx="12" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <rect x="40" y="120" width="310" height="52" rx="12" fill="#eef2ff"/>
+  <rect x="40" y="146" width="310" height="26" fill="#eef2ff"/>
+  <text x="60" y="142" font-size="15" font-weight="700" fill="#3730a3">편집기 (Cursor · VS Code)</text>
+  <text x="60" y="161" font-size="11" fill="#6366f1">vscode-rn-preview 확장</text>
+
+  <rect x="60" y="190" width="270" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="218" font-size="13" font-weight="600" fill="#1e293b">컴포넌트 소스</text>
+  <text x="75" y="240" font-size="10.5" font-family="Menlo,'SF Mono',monospace" fill="#64748b">SubscriptionScreen.tsx</text>
+
+  <line x1="195" y1="262" x2="195" y2="298" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="302" width="270" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="328" font-size="13" font-weight="600" fill="#1e293b">▶ 프리뷰 열기 (CodeLens)</text>
+  <text x="75" y="348" font-size="11" fill="#64748b">선언 파일로 이동 · 없으면 생성</text>
+
+  <line x1="195" y1="366" x2="195" y2="626" stroke="#475569" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="195" y="490" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#ffffff" stroke-width="4">서버 기동</text>
+  <text x="195" y="506" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#ffffff" stroke-width="4">패널 열기</text>
+
+  <rect x="60" y="630" width="270" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="660" font-size="13" font-weight="600" fill="#1e293b">프리뷰 패널 (webview)</text>
+  <text x="75" y="682" font-size="11" fill="#64748b">렌더 결과를 iframe 으로 표시</text>
+
+  <!-- ───────── 그룹 B1: 대상 프로젝트 저장소 ───────── -->
+  <rect x="410" y="120" width="400" height="250" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="410" y="120" width="400" height="52" rx="12" fill="#fffbeb"/>
+  <rect x="410" y="146" width="400" height="26" fill="#fffbeb"/>
+  <text x="430" y="142" font-size="15" font-weight="700" fill="#92400e">대상 RN 프로젝트</text>
+  <text x="430" y="161" font-size="11" fill="#b45309">읽기 전용 — 이 도구는 파일을 고치지 않는다</text>
+
+  <rect x="430" y="186" width="360" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="208" font-size="13" font-weight="600" fill="#1e293b">컴포넌트 소스</text>
+  <text x="445" y="228" font-size="10.5" font-family="Menlo,'SF Mono',monospace" fill="#64748b">app/screens/account/SubscriptionScreen.tsx</text>
+
+  <line x1="610" y1="248" x2="610" y2="294" stroke="#94a3b8" stroke-width="1.6" marker-start="url(#arrowBoth)" marker-end="url(#arrowBoth)"/>
+  <text x="624" y="275" font-size="11" fill="#64748b">같은 상대경로로 잇는다</text>
+
+  <rect x="430" y="300" width="360" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="322" font-size="13" font-weight="600" fill="#1e293b">선언 파일  *.preview.tsx</text>
+  <text x="445" y="342" font-size="10.5" fill="#64748b">무시되는 경로로 symlink · 팀 저장소에 안 들어감</text>
+
+  <!-- ───────── 그룹 B2: 선언 생성기 ───────── -->
+  <rect x="410" y="430" width="400" height="240" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="410" y="430" width="400" height="52" rx="12" fill="#ecfdf5"/>
+  <rect x="410" y="456" width="400" height="26" fill="#ecfdf5"/>
+  <text x="430" y="452" font-size="15" font-weight="700" fill="#065f46">선언 생성기</text>
+  <text x="430" y="471" font-size="11" fill="#059669">npm run preview:new · ts-morph</text>
+
+  <rect x="430" y="498" width="360" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="520" font-size="13" font-weight="600" fill="#1e293b">소스 분석</text>
+  <text x="445" y="540" font-size="10.5" fill="#64748b">props union · 판별 union · useQuery(훅 2겹 추적) · enum</text>
+
+  <line x1="610" y1="562" x2="610" y2="576" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="430" y="580" width="360" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="602" font-size="13" font-weight="600" fill="#1e293b">선언 초안 생성</text>
+  <text x="445" y="622" font-size="10.5" fill="#64748b">변형·상태·mock 뼈대 자동 — 값의 의미는 사람·에이전트가 채움</text>
+
+  <!-- ───────── 그룹 C: 개발 서버 (Vite) ───────── -->
+  <rect x="880" y="120" width="440" height="620" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+  <rect x="880" y="120" width="440" height="52" rx="12" fill="#f0f9ff"/>
+  <rect x="880" y="146" width="440" height="26" fill="#f0f9ff"/>
+  <text x="900" y="142" font-size="15" font-weight="700" fill="#075985">개발 서버 (Vite)</text>
+  <text x="900" y="161" font-size="11" fill="#0284c7">네이티브 코드를 브라우저에서 돌린다</text>
+
+  <text x="900" y="194" font-size="12" font-weight="700" fill="#0369a1">해석 계층</text>
+
+  <rect x="900" y="202" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="219" font-size="12" font-weight="600" fill="#1e293b">별칭 해석</text>
+  <text x="914" y="235" font-size="10.5" fill="#64748b">@ui · @lib · @screens — 대상 프로젝트 tsconfig 에서 읽음</text>
+  <text x="1100" y="254" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="256" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="273" font-size="12" font-weight="600" fill="#1e293b">react-native shim</text>
+  <text x="914" y="289" font-size="10.5" fill="#64748b">react-native-web + TurboModule·NativeModules 다리</text>
+  <text x="1100" y="308" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="310" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="327" font-size="12" font-weight="600" fill="#1e293b">빈 스텁</text>
+  <text x="914" y="343" font-size="10.5" fill="#64748b">analytics · 푸시 · 권한 · 저장소 · 공유 — export 는 진짜 패키지에서</text>
+  <text x="1100" y="362" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="364" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="381" font-size="12" font-weight="600" fill="#1e293b">Metro 전용 문법</text>
+  <text x="914" y="397" font-size="10.5" fill="#64748b">require() 자산 → import · .svg → react-native-svg</text>
+  <text x="1100" y="416" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="418" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="435" font-size="12" font-weight="600" fill="#1e293b">reanimated worklet</text>
+  <text x="914" y="451" font-size="10.5" fill="#64748b">대상 프로젝트의 babel 플러그인을 별도 단계로 돌림</text>
+  <text x="1100" y="470" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="472" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="489" font-size="12" font-weight="600" fill="#1e293b">RN 스타일 관용구</text>
+  <text x="914" y="505" font-size="10.5" fill="#64748b">top: undefined → auto</text>
+  <text x="1100" y="524" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="526" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="543" font-size="12" font-weight="600" fill="#1e293b">앱 코드 우회</text>
+  <text x="914" y="559" font-size="10.5" fill="#64748b">플랫폼 설정 · isProduction · AB 배정은 선언에서 읽음</text>
+
+  <line x1="1100" y1="568" x2="1100" y2="596" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="900" y="600" width="400" height="90" rx="8" fill="#0369a1"/>
+  <text x="914" y="630" font-size="13.5" font-weight="700" fill="#ffffff">렌더러 — react-native-web</text>
+  <text x="914" y="652" font-size="11" fill="#e0f2fe">PreviewGrid: 변형 × 상태 × 기기 폭을 한 화면에</text>
+  <text x="914" y="670" font-size="11" fill="#e0f2fe">mockQueries · wrappers · 앱 루트 Provider 주입</text>
+
+  <!-- ───────── 그룹 간 화살표 ───────── -->
+  <!-- 편집기 소스 → 대상 프로젝트 소스 -->
+  <line x1="330" y1="220" x2="426" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="378" y="209" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">파일을 연다</text>
+
+  <!-- CodeLens → 생성기 -->
+  <path d="M 330 334 H 372 V 551 H 406" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="371" y="435" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">선언 없으면</text>
+  <text x="371" y="451" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">초안 생성</text>
+
+  <!-- 생성기 → 선언 파일 -->
+  <path d="M 790 612 H 838 V 344 H 794" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="839" y="470" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">초안 저장</text>
+
+  <!-- 대상 프로젝트 소스 → Vite -->
+  <line x1="790" y1="214" x2="876" y2="214" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="835" y="203" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">소스 import</text>
+
+  <!-- 선언 파일 → Vite -->
+  <line x1="790" y1="312" x2="876" y2="312" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="835" y="301" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">선언 import</text>
+
+  <!-- 렌더러 → 패널 (iframe) -->
+  <path d="M 1100 690 V 780 H 195 V 718" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="650" y="772" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">iframe 으로 렌더 결과 전달</text>
+
+  <!-- 각주 -->
+  <text x="40" y="830" font-size="11.5" fill="#64748b">대상 프로젝트는 읽기 전용 · 선언은 무시되는 경로로 symlink 되어 팀 저장소에 들어가지 않는다 · 픽셀 판정은 이 도구 밖 (COMPATIBILITY.md)</text>
+</svg>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RN Preview</title>
+        <style>
+            /* react-native-web's height: '100%' follows the parent height. Filled from the root down. */
+            html,
+            body,
+            #root {
+                height: 100%;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <!-- React Native code calls the global object `global`. Browsers have no such name. -->
+        <script>
+            window.global = window;
+        </script>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
+</html>

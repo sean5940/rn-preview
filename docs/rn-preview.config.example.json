@@ -1,0 +1,27 @@
+{
+    "sourceRoot": "app",
+    "nonRenderingPackages": [
+        "@notifee/react-native",
+        "@react-native-cookies/cookies",
+        "@react-native-firebase/*",
+        "react-native-device-info",
+        "react-native-haptic-feedback",
+        "react-native-mmkv",
+        "react-native-permissions",
+        "react-native-share"
+    ],
+    "sharedPackages": ["react-native-gesture-handler"],
+    "fontDirs": ["assets/fonts"],
+    "moduleOverrides": {
+        "app/config/index.ts": "_overrides/appConfig.ts",
+        "app/selector/AbTestSelector.ts": "_overrides/abTestSelector.ts"
+    },
+    "rootProviders": ["_overrides/reduxProvider.tsx"],
+    "importRedirects": [
+        {
+            "importerUnder": "app/ui/foundation",
+            "from": "app/ui/index.ts",
+            "to": "app/ui/foundation/index.ts"
+        }
+    ]
+}

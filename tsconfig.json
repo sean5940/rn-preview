@@ -1,0 +1,24 @@
+{
+    // paths is generated from the target project's tsconfig. Starting the dev server rewrites it.
+    "extends": "./tsconfig.paths.json",
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "strict": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "allowJs": false,
+        "noEmit": true,
+        // The Vite config files import each other with the `.ts` extension. Vite requires that form.
+        "allowImportingTsExtensions": true
+    },
+    // Declaration files live outside this repository and have their own generated tsconfig.
+    "include": ["src", "test", "vite.config.ts", "vitest.config.ts"],
+    // The fixture is a target project with its own tsconfig and aliases.
+    "exclude": ["test/fixture-app"]
+}

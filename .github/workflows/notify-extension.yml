@@ -1,0 +1,37 @@
+name: Notify extension rebuild
+
+# The editor extension ships this repository's sources. When they change, the extension has to be
+# rebuilt for installs to pick up the latest tool. The rebuild itself is done by the
+# release-extension workflow in the extension repository.
+#
+# paths lists only what syncTool actually copies, so a docs-only push does not trigger it.
+
+on:
+    push:
+        branches: [main]
+        paths:
+            - src/**
+            - scripts/**
+            - index.html
+            - vite.config.ts
+            - tsconfig.json
+            - package.json
+            - package-lock.json
+            - .prettierrc.json
+
+jobs:
+    notify:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Request a rebuild in the extension repository
+              env:
+                  GH_TOKEN: ${{ secrets.EXTENSION_DISPATCH_TOKEN }}
+              # Forks and a repository without the secret skip instead of failing. Releasing the
+              # extension stays possible by hand from its own Actions tab.
+              run: |
+                  if [ -z "${GH_TOKEN}" ]; then
+                    echo "::notice::EXTENSION_DISPATCH_TOKEN is not set, so the extension rebuild was not requested."
+                    exit 0
+                  fi
+                  gh api repos/sean5940/vscode-rn-preview/dispatches \
+                    -f event_type=tool-updated

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="850" viewBox="0 0 1360 850" font-family="-apple-system,'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBoth" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1360" height="850" fill="#f8fafc"/>
+
+  <!-- title -->
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#0f172a">rn-preview architecture</text>
+  <text x="40" y="80" font-size="15" fill="#64748b">Draws React Native components in a browser without building the app</text>
+
+  <!-- ───────── group A: editor ───────── -->
+  <rect x="40" y="120" width="310" height="620" rx="12" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <rect x="40" y="120" width="310" height="52" rx="12" fill="#eef2ff"/>
+  <rect x="40" y="146" width="310" height="26" fill="#eef2ff"/>
+  <text x="60" y="142" font-size="15" font-weight="700" fill="#3730a3">Editor (Cursor · VS Code)</text>
+  <text x="60" y="161" font-size="11" fill="#6366f1">vscode-rn-preview extension</text>
+
+  <rect x="60" y="190" width="270" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="218" font-size="13" font-weight="600" fill="#1e293b">Component source</text>
+  <text x="75" y="240" font-size="10.5" font-family="Menlo,'SF Mono',monospace" fill="#64748b">SubscriptionScreen.tsx</text>
+
+  <line x1="195" y1="262" x2="195" y2="298" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="302" width="270" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="328" font-size="13" font-weight="600" fill="#1e293b">▶ Open preview (CodeLens)</text>
+  <text x="75" y="348" font-size="11" fill="#64748b">Jump to the declaration · create if absent</text>
+
+  <line x1="195" y1="366" x2="195" y2="626" stroke="#475569" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="195" y="490" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#ffffff" stroke-width="4">start server</text>
+  <text x="195" y="506" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#ffffff" stroke-width="4">open panel</text>
+
+  <rect x="60" y="630" width="270" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="75" y="660" font-size="13" font-weight="600" fill="#1e293b">Preview panel (webview)</text>
+  <text x="75" y="682" font-size="11" fill="#64748b">Shows the render in an iframe</text>
+
+  <!-- ───────── group B1: target project repository ───────── -->
+  <rect x="410" y="120" width="400" height="250" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="410" y="120" width="400" height="52" rx="12" fill="#fffbeb"/>
+  <rect x="410" y="146" width="400" height="26" fill="#fffbeb"/>
+  <text x="430" y="142" font-size="15" font-weight="700" fill="#92400e">Target RN project</text>
+  <text x="430" y="161" font-size="11" fill="#b45309">Read-only. This tool modifies no files</text>
+
+  <rect x="430" y="186" width="360" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="208" font-size="13" font-weight="600" fill="#1e293b">Component source</text>
+  <text x="445" y="228" font-size="10.5" font-family="Menlo,'SF Mono',monospace" fill="#64748b">app/screens/account/SubscriptionScreen.tsx</text>
+
+  <line x1="610" y1="248" x2="610" y2="294" stroke="#94a3b8" stroke-width="1.6" marker-start="url(#arrowBoth)" marker-end="url(#arrowBoth)"/>
+  <text x="624" y="275" font-size="11" fill="#64748b">Linked by the same relative path</text>
+
+  <rect x="430" y="300" width="360" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="322" font-size="13" font-weight="600" fill="#1e293b">Declaration file  *.preview.tsx</text>
+  <text x="445" y="342" font-size="10.5" fill="#64748b">Symlinked to an ignored path · never enters the team repo</text>
+
+  <!-- ───────── group B2: declaration generator ───────── -->
+  <rect x="410" y="430" width="400" height="240" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="410" y="430" width="400" height="52" rx="12" fill="#ecfdf5"/>
+  <rect x="410" y="456" width="400" height="26" fill="#ecfdf5"/>
+  <text x="430" y="452" font-size="15" font-weight="700" fill="#065f46">Declaration generator</text>
+  <text x="430" y="471" font-size="11" fill="#059669">npm run preview:new · ts-morph</text>
+
+  <rect x="430" y="498" width="360" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="520" font-size="13" font-weight="600" fill="#1e293b">Source analysis</text>
+  <text x="445" y="540" font-size="10.5" fill="#64748b">props union · discriminated union · useQuery (2 hook levels) · enum</text>
+
+  <line x1="610" y1="562" x2="610" y2="576" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="430" y="580" width="360" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="445" y="602" font-size="13" font-weight="600" fill="#1e293b">Draft generation</text>
+  <text x="445" y="622" font-size="10.5" fill="#64748b">Variants, states, mock skeletons automatic. Meaning filled in by hand</text>
+
+  <!-- ───────── group C: dev server (Vite) ───────── -->
+  <rect x="880" y="120" width="440" height="620" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+  <rect x="880" y="120" width="440" height="52" rx="12" fill="#f0f9ff"/>
+  <rect x="880" y="146" width="440" height="26" fill="#f0f9ff"/>
+  <text x="900" y="142" font-size="15" font-weight="700" fill="#075985">Dev server (Vite)</text>
+  <text x="900" y="161" font-size="11" fill="#0284c7">Runs native code in the browser</text>
+
+  <text x="900" y="194" font-size="12" font-weight="700" fill="#0369a1">Resolution layer</text>
+
+  <rect x="900" y="202" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="219" font-size="12" font-weight="600" fill="#1e293b">Alias resolution</text>
+  <text x="914" y="235" font-size="10.5" fill="#64748b">@ui · @lib · @screens, read from the target tsconfig</text>
+  <text x="1100" y="254" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="256" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="273" font-size="12" font-weight="600" fill="#1e293b">react-native shim</text>
+  <text x="914" y="289" font-size="10.5" fill="#64748b">react-native-web + TurboModule / NativeModules bridges</text>
+  <text x="1100" y="308" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="310" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="327" font-size="12" font-weight="600" fill="#1e293b">Empty stubs</text>
+  <text x="914" y="343" font-size="10.5" fill="#64748b">analytics · push · permissions · storage · sharing</text>
+  <text x="1100" y="362" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="364" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="381" font-size="12" font-weight="600" fill="#1e293b">Metro-only syntax</text>
+  <text x="914" y="397" font-size="10.5" fill="#64748b">require() assets → import · .svg → react-native-svg</text>
+  <text x="1100" y="416" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="418" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="435" font-size="12" font-weight="600" fill="#1e293b">reanimated worklet</text>
+  <text x="914" y="451" font-size="10.5" fill="#64748b">Runs the target project's babel plugin as a separate step</text>
+  <text x="1100" y="470" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="472" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="489" font-size="12" font-weight="600" fill="#1e293b">RN style idioms</text>
+  <text x="914" y="505" font-size="10.5" fill="#64748b">top: undefined → auto</text>
+  <text x="1100" y="524" font-size="10" fill="#38bdf8" text-anchor="middle">▼</text>
+
+  <rect x="900" y="526" width="400" height="42" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+  <text x="914" y="543" font-size="12" font-weight="600" fill="#1e293b">App-code overrides</text>
+  <text x="914" y="559" font-size="10.5" fill="#64748b">platform config · isProduction · A/B from the declaration</text>
+
+  <line x1="1100" y1="568" x2="1100" y2="596" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="900" y="600" width="400" height="90" rx="8" fill="#0369a1"/>
+  <text x="914" y="630" font-size="13.5" font-weight="700" fill="#ffffff">Renderer — react-native-web</text>
+  <text x="914" y="652" font-size="11" fill="#e0f2fe">PreviewGrid: variant × state × device width, one screen</text>
+  <text x="914" y="670" font-size="11" fill="#e0f2fe">mockQueries · wrappers · app root providers injected</text>
+
+  <!-- ───────── arrows between groups ───────── -->
+  <!-- editor source -> target project source -->
+  <line x1="330" y1="220" x2="426" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="378" y="209" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">opens a file</text>
+
+  <!-- CodeLens -> generator -->
+  <path d="M 330 334 H 372 V 551 H 406" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="371" y="435" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">if no declaration,</text>
+  <text x="371" y="451" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">generate a draft</text>
+
+  <!-- generator -> declaration file -->
+  <path d="M 790 612 H 838 V 344 H 794" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="839" y="470" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">save the draft</text>
+
+  <!-- target project source -> Vite -->
+  <line x1="790" y1="214" x2="876" y2="214" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="835" y="203" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">source import</text>
+
+  <!-- declaration file -> Vite -->
+  <line x1="790" y1="312" x2="876" y2="312" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="835" y="301" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">declaration import</text>
+
+  <!-- renderer -> panel (iframe) -->
+  <path d="M 1100 690 V 780 H 195 V 718" fill="none" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="650" y="772" font-size="11" fill="#475569" text-anchor="middle" style="paint-order:stroke" stroke="#f8fafc" stroke-width="4">render delivered via iframe</text>
+
+  <!-- footnote -->
+  <text x="40" y="830" font-size="11.5" fill="#64748b">The target project is read-only · declarations are symlinked to an ignored path · pixel judgement stays outside this tool (COMPATIBILITY.en.md)</text>
+</svg>

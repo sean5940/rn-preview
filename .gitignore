@@ -1,0 +1,6 @@
+node_modules/
+dist/
+captures/
+.DS_Store
+rn-preview.local.json
+tsconfig.paths.json

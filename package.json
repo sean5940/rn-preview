@@ -1,0 +1,49 @@
+{
+    "name": "rn-preview",
+    "description": "Preview React Native components in a browser without building the app.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sean5940/rn-preview.git"
+    },
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "typecheck:previews": "node scripts/typecheckPreviews.mjs",
+        "preview:new": "node --experimental-strip-types scripts/generatePreview.ts",
+        "capture": "node scripts/capturePreviews.mjs",
+        "postinstall": "node scripts/ensurePathsFile.mjs"
+    },
+    "dependencies": {
+        "lottie-web": "5.13.0",
+        "react": "19.2.4",
+        "react-dom": "19.2.4",
+        "react-native-svg": "15.13.0",
+        "react-native-web": "0.21.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.29.7",
+        "@svgr/core": "^8.1.0",
+        "@svgr/plugin-jsx": "^8.1.0",
+        "@testing-library/react": "16.3.2",
+        "@types/babel__core": "^7.20.5",
+        "@types/react": "19.2.4",
+        "@types/react-dom": "19.2.4",
+        "@vitejs/plugin-react": "6.0.5",
+        "cjs-module-lexer": "^2.2.0",
+        "es-module-lexer": "^2.3.1",
+        "jsdom": "30.0.1",
+        "playwright-core": "^1.62.1",
+        "prettier": "^3.9.6",
+        "ts-morph": "^28.0.0",
+        "typescript": "5.8.3",
+        "vite": "8.2.1",
+        "vite-tsconfig-paths": "6.1.1",
+        "vitest": "4.1.10"
+    }
+}
