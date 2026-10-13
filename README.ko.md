@@ -232,10 +232,12 @@ export default definePreview({
 
 ## 편집기에서 보기
 
-[RN Preview](https://marketplace.visualstudio.com/items?itemName=sean5940.vscode-rn-preview) 확장
-([소스](https://github.com/sean5940/vscode-rn-preview))을 설치하면 Cursor·VS Code 패널에서 봅니다. 확장에 이 도구가
-실려 있어 따로 설치할 것이 없습니다. 선언 파일 위의 `▶ Open preview` 를 누르면 개발 서버가 뜨고 그 선언이 선택된
-채로 열립니다.
+RN Preview 확장([소스](https://github.com/sean5940/vscode-rn-preview))을 설치하면 Cursor·VS Code 패널에서 봅니다.
+VS Code 는 [Marketplace](https://marketplace.visualstudio.com/items?itemName=sean5940.vscode-rn-preview), Cursor 는
+[Open VSX](https://open-vsx.org/extension/sean5940/vscode-rn-preview) 에서 받습니다. 확장에 이 도구가 실려 있어 따로
+설치할 것이 없습니다. 컴포넌트 위의 `▶ Open preview` 를 누르면 개발 서버가 뜨고 그 선언이 선택된 채로 열립니다.
+
+![컴포넌트 옆에 프리뷰를 열고 선언으로 넘어가는 화면](https://github.com/sean5940/vscode-rn-preview/raw/main/images/demo.gif)
 
 ## 구성
 

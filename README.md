@@ -232,10 +232,13 @@ export default definePreview({
 
 ## Viewing in the editor
 
-Install the [RN Preview](https://marketplace.visualstudio.com/items?itemName=sean5940.vscode-rn-preview) extension
-([source](https://github.com/sean5940/vscode-rn-preview)) to see previews in a Cursor · VS Code panel. It ships this
-tool, so nothing else needs installing. Press `▶ Open preview` above a declaration and the dev server starts with that
-declaration selected.
+Install the RN Preview extension ([source](https://github.com/sean5940/vscode-rn-preview)) to see previews in a
+Cursor · VS Code panel: from the
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sean5940.vscode-rn-preview), or from
+[Open VSX](https://open-vsx.org/extension/sean5940/vscode-rn-preview) for Cursor. It ships this tool, so nothing else
+needs installing. Press `▶ Open preview` above a component and the dev server starts with its declaration selected.
+
+![Opening a preview beside a component, then jumping to its declaration](https://github.com/sean5940/vscode-rn-preview/raw/main/images/demo.gif)
 
 ## Layout
 
