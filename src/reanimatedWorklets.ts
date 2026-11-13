@@ -6,6 +6,9 @@ import { MOBILE_APP_ROOT } from './mobileAppPath.ts';
 /** Selects only files that use worklets. Running babel over the rest slows the dev server down. */
 const USES_WORKLETS = /react-native-reanimated|react-native-worklets|['"]worklet['"]/;
 
+/** Only script modules go through babel. A package's JSON (reanimated 4.3 `compatibility.json`) names reanimated too, and babel cannot parse it. */
+const SCRIPT_MODULE = /\.[cm]?[jt]sx?$/;
+
 /**
  * reanimated 4 hands the plugin to the worklets package. The target project's copy is used as is.
  *
@@ -39,6 +42,7 @@ export const reanimatedWorklets = (): Plugin => ({
     async transform(code, id) {
         if (workletsPlugin === undefined) return null;
         if (!id.startsWith(`${MOBILE_APP_ROOT}/`)) return null;
+        if (!SCRIPT_MODULE.test(id.split('?')[0])) return null;
         if (!USES_WORKLETS.test(code)) return null;
 
         const result = await transformAsync(code, {
